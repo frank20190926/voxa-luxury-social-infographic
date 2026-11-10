@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VOXA — Speaker Ads &amp; Infographic</title>
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<style>*{margin:0;box-sizing:border-box}body{background:#0A0809;color:#F7F3EC;font:300 16px/1.6 'Plus Jakarta Sans',sans-serif}
+header{padding:48px 6vw 24px;border-bottom:1px solid rgba(201,169,110,.35)}h1{font:500 56px/1 'Cormorant Garamond',serif}h1 i{color:#C9A96E}
+.k{font:500 12px 'Plus Jakarta Sans';letter-spacing:.3em;color:#C9A96E;margin-bottom:12px}
+nav{display:flex;gap:32px;padding:16px 6vw;border-bottom:1px solid rgba(201,169,110,.35);position:sticky;top:0;background:#0A0809;z-index:5}
+nav button,.sub button{background:none;border:0;border-bottom:1px solid transparent;color:#F7F3EC;font:500 12px 'Plus Jakarta Sans';letter-spacing:.24em;padding:6px 0;cursor:pointer}
+nav button.on,.sub button.on{border-color:#C9A96E;color:#C9A96E}
+section{display:none;padding:32px 6vw 80px}section.on{display:block}.sub{display:flex;gap:28px;margin-bottom:24px}
+img{max-width:100%;display:block;outline:1px solid rgba(201,169,110,.4)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(420px,1fr));gap:28px}
+.view{max-width:1100px}.long{max-width:700px;margin:0 auto}a{color:#C9A96E}.dl{display:inline-block;margin-top:20px;border:1px solid #C9A96E;padding:14px 28px;font:italic 500 22px 'Cormorant Garamond';text-decoration:none}</style>
+<header><div class="k">CONTEST #2801508 · VOXA HOUSE</div><h1>VOXA <i>Speaker Ads</i> &amp; Infographic</h1></header>
+<nav><button class="on" data-t="p1">PROJECT 1 — SPEAKER ADS</button><button data-t="p2">PROJECT 2 — INFOGRAPHIC</button><button data-t="bd">BOARDS</button><button data-t="dl">DOWNLOAD</button></nav>
+<section id="p1" class="on"><div class="sub" id="opt"><button class="on" data-o="A">OPTION A — CHICAGO BRIDGE</button><button data-o="B">OPTION B — STUDIO COUTURE</button></div>
+<div class="grid"><div><div class="k">IG FEED 1080 × 1350</div><img id="f"></div><div><div class="k">IG STORY 1080 × 1920</div><img id="s"></div><div style="grid-column:1/-1"><div class="k">LINKEDIN 1200 × 628</div><img id="l" class="view"></div></div></section>
+<section id="p2"><div class="sub" id="zm"><button class="on" data-z="fit">FIT</button><button data-z="full">FULL SIZE 2000 PX</button></div><div id="lw"><img id="lg" class="long" src="deliverables/voxa_longform_infographic_2000x6000.jpg"></div></section>
+<section id="bd"><div class="grid" style="grid-template-columns:1fr">
+<img src="deliverables/board1_hero_infographic_and_speaker_suite.jpg"><img src="deliverables/board2_speaker_ads_3sizes_ab_options.jpg"><img src="deliverables/board3_longform_infographic_2split.jpg"><img src="deliverables/board4_editorial_spec_and_deliverables.jpg"></div></section>
+<section id="dl"><p>Master pack: ads (A/B × 3 sizes), 2000 × 6000 infographic (JPG, PNG, PDF), four 3200 × 2400 boards.</p><a class="dl" href="exports/VOXA_Luxury_Social_Ads_Infographic_Master_Pack.zip" download>Download .zip</a>
+<p style="margin-top:24px"><a href="deliverables/VOXA_Brand_Partner_Infographic.pdf">Infographic PDF</a> · <a href="deliverables/voxa_longform_infographic_2000x6000.png">Infographic PNG</a></p></section>
+<script>const N={f:'ad_ig_feed_1080x1350',s:'ad_ig_story_1080x1920',l:'ad_linkedin_1200x628'};let O='A';
+function ads(){for(const k in N)document.getElementById(k).src='deliverables/'+N[k]+'_option'+O+'.jpg'}ads();
+document.querySelectorAll('nav button').forEach(b=>b.onclick=()=>{document.querySelectorAll('nav button,section').forEach(e=>e.classList.remove('on'));b.classList.add('on');document.getElementById(b.dataset.t).classList.add('on')});
+document.querySelectorAll('#opt button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#opt button').forEach(e=>e.classList.remove('on'));b.classList.add('on');O=b.dataset.o;ads()});
+document.querySelectorAll('#zm button').forEach(b=>b.onclick=()=>{document.querySelectorAll('#zm button').forEach(e=>e.classList.remove('on'));b.classList.add('on');const g=document.getElementById('lg');g.style.maxWidth=b.dataset.z=='full'?'none':'700px';g.style.width=b.dataset.z=='full'?'2000px':'';document.getElementById('lw').style.overflow='auto'})</script></html>
